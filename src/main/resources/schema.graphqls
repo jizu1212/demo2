@@ -1,0 +1,18 @@
+scalar Long
+
+type Item {
+  # unix epoch seconds
+  createdAt: Long!
+  updatedAt: Long!
+  value: String
+}
+
+type Query {
+  find(key: String!): Item
+}
+
+type Mutation {
+  # Input: key & value
+  # Return: 이전에 해당 key 로 값이 있었을 경우 이전 값
+  store(key: String!, value: String): Item
+}
