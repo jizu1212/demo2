@@ -1,9 +1,8 @@
-scalar Long
-
 type Item {
   # unix epoch seconds
-  createdAt: Long!
-  updatedAt: Long!
+  key: String!
+  createdAt: Int!
+  updatedAt: Int!
   value: String
 }
 
